@@ -1,4 +1,4 @@
-package ProjetoBackEnd;
+package JavaGame;
 
 public interface Weapon {
     int increaseDamege();

@@ -1,5 +1,4 @@
-package ProjetoBackEnd;
-import java.util.Random;
+package JavaGame;
 
 public class gameBoard {
     private Cell[][] grid;

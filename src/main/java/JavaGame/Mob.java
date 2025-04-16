@@ -1,4 +1,4 @@
-package ProjetoBackEnd;
+package JavaGame;
 
 public abstract class Mob implements Character{
     private int lifePoints;

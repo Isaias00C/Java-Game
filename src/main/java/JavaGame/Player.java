@@ -1,4 +1,4 @@
-package ProjetoBackEnd;
+package JavaGame;
 
 public class Player implements Character {
     private int lifePoints;

@@ -1,4 +1,4 @@
-package ProjetoBackEnd;
+package JavaGame;
 
 public class commomSword implements Weapon{
     private int damage;

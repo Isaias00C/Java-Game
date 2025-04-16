@@ -1,4 +1,4 @@
-package ProjetoBackEnd;
+package JavaGame;
 
 public class Cell {
     private Character character;
