@@ -1,6 +1,6 @@
 package JavaGame;
 
-public class commomSword implements Weapon{
+public class CommomSword implements Weapon{
     private int damage;
 
     @Override

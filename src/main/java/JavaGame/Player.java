@@ -15,7 +15,6 @@ public class Player implements Character {
         mob.damageReceive(this.damage);
     }
 
-    @Override
     public void damageReceive(int damage) {
         this.lifePoints -= damage;
     }

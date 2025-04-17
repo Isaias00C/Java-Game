@@ -13,7 +13,6 @@ public abstract class Mob implements Character{
         player.damageReceive(this.damage);
     }
 
-    @Override
     public void damageReceive(int damage) {
         this.lifePoints -= damage;
     }

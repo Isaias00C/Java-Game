@@ -1,8 +1,8 @@
 package JavaGame;
 
 public class Cell {
-    private Character character;
-    private Weapon weapon;
+    private Character character = null;
+    private Weapon weapon = null;
 
     public void setCharacter(Character character) {
         this.character = character;
@@ -19,4 +19,6 @@ public class Cell {
     public Weapon getWeapon(){
         return this.weapon;
     }
+
+
 }
