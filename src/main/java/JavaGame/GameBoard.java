@@ -27,9 +27,7 @@ public class GameBoard {
         //set player
         System.out.print("To begin yout journey first enter your name: ");
         String name = scanner.nextLine();
-
         setPlayer(new Player(name));
-
 
         //set Mobs
         setMobs();
@@ -52,15 +50,21 @@ public class GameBoard {
                 i--;
             }else {
                 //set the mob in the cell
-
-                //choose the mob randomly
-
-
-
+                grid[row][col].setCharacter(new Orc());
             }
-
-
         }
     }
 
+    public void printGameBoard(){
+        System.out.println("\nThis is the current game board");
+
+        for(Cell[] cells : grid){
+            for (Cell cell : cells) {
+                cell.printCell();
+            }
+            System.out.println();
+        }
+    }
+
+    public Cell getCell(int row, int col){ return this.grid[row][col]; }
 }

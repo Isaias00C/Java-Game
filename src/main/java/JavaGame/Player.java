@@ -28,4 +28,8 @@ public class Player implements Character {
     public String getStatus() {
         return "->Player " + this.name + "\n->LifePoints: " + this.lifePoints + "\n->Damage: " + this.damage;
     }
+
+    public String toString() {
+        return " [ You ] ";
+    }
 }

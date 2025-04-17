@@ -27,4 +27,7 @@ public abstract class Mob implements Character{
         return "->LifePoints: " + this.lifePoints + "\n->Damage: " + this.damage;
     }
 
+    public String toString() {
+        return " [ Mob ] ";
+    }
 }

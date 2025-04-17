@@ -20,5 +20,15 @@ public class Cell {
         return this.weapon;
     }
 
+    public void setNullCell(){
+        this.character = null;
+    }
 
+    public void printCell(){
+        if(this.character != null){
+            System.out.print(this.character.toString());
+        }else{
+            System.out.print(" [     ] ");
+        }
+    }
 }
