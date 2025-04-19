@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class GameBoard {
     private Cell[][] grid;
+    private final Character[] turns;
 
     GameBoard(String difficulty){
         switch (difficulty) {
@@ -11,6 +12,9 @@ public class GameBoard {
             case "Medium" -> grid = new Cell[13][13];
             case "Hard" -> grid = new Cell[21][21];
         }
+
+        assert grid != null;
+        turns = new Character[(grid.length / 3) + 1];
     }
 
     public void setGameBoard(){
@@ -22,7 +26,7 @@ public class GameBoard {
 
         int numberOfMobs = grid[0].length / 3;
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = ScannerSingleton.getInstance();
 
         //set player
         System.out.print("To begin yout journey first enter your name: ");
@@ -32,11 +36,12 @@ public class GameBoard {
         //set Mobs
         setMobs();
 
-        scanner.close();
     }
 
     public void setPlayer(Player player){
         grid[0][0].setCharacter(player);
+        grid[0][0].getCharacter().setCoordinates(0, 0);
+        turns[0] = grid[0][0].getCharacter();
     }
 
     public void setMobs(){
@@ -51,6 +56,8 @@ public class GameBoard {
             }else {
                 //set the mob in the cell
                 grid[row][col].setCharacter(new Orc());
+                turns[i+1] = grid[row][col].getCharacter();
+                grid[row][col].getCharacter().setCoordinates(col, row);
             }
         }
     }
@@ -67,4 +74,11 @@ public class GameBoard {
     }
 
     public Cell getCell(int row, int col){ return this.grid[row][col]; }
+
+    public void moveCharacter(Character character){
+        int x = character.getXCoordinate();
+        int y = character.getYCoordinate();
+
+
+    }
 }

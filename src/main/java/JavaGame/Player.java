@@ -4,6 +4,8 @@ public class Player implements Character {
     private int lifePoints;
     private final int damage;
     private final String name;
+    private int XCoordinate;
+    private int YCoordinate;
 
     public Player(String name) {
         this.lifePoints = 100;
@@ -31,5 +33,32 @@ public class Player implements Character {
 
     public String toString() {
         return " [ You ] ";
+    }
+
+    @Override
+    public void setCoordinates(int XCoordinate, int YCoordinate){
+        this.XCoordinate = XCoordinate;
+        this.YCoordinate = YCoordinate;
+    }
+
+    @Override
+    public int getXCoordinate() {
+        return this.XCoordinate;
+    }
+
+    @Override
+    public int getYCoordinate() {
+        return this.YCoordinate;
+    }
+
+    @Override
+    public void moveCharacter(String direction) {
+        switch (direction) {
+            case "up" -> this.YCoordinate = this.YCoordinate - 1;
+            case "down" -> this.YCoordinate = this.YCoordinate + 1;
+            case "left" -> this.XCoordinate = this.XCoordinate - 1;
+            case "right" -> this.XCoordinate = this.XCoordinate + 1;
+            default -> System.out.println("Invalid direction");
+        }
     }
 }

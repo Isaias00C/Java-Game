@@ -10,9 +10,21 @@ public class Main {
         gameBoard.setGameBoard();
         gameBoard.printGameBoard();
 
+        //set player
         Player player = (Player) gameBoard.getCell(0,0).getCharacter();
 
         System.out.println(player.getStatus());
+
+        //begin the game
+            Scanner scanner = ScannerSingleton.getInstance();
+
+            System.out.println("It's your turn, move!");
+            System.out.print("For where: ");
+            String move = scanner.nextLine().toLowerCase();
+
+            player.moveCharacter(move);
+            gameBoard.printGameBoard();
+
 
     }
 }
