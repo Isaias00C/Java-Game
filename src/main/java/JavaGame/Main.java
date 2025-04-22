@@ -16,12 +16,6 @@ public class Main {
         System.out.println(player.getStatus());
 
         //begin the game
-            Scanner scanner = ScannerSingleton.getInstance();
-
-            System.out.println("It's your turn, move!");
-            System.out.print("For where: ");
-            String move = scanner.nextLine().toLowerCase();
-
             player.moveCharacter(move);
             gameBoard.printGameBoard();
 

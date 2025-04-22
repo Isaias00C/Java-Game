@@ -51,14 +51,4 @@ public class Player implements Character {
         return this.YCoordinate;
     }
 
-    @Override
-    public void moveCharacter(String direction) {
-        switch (direction) {
-            case "up" -> this.YCoordinate = this.YCoordinate - 1;
-            case "down" -> this.YCoordinate = this.YCoordinate + 1;
-            case "left" -> this.XCoordinate = this.XCoordinate - 1;
-            case "right" -> this.XCoordinate = this.XCoordinate + 1;
-            default -> System.out.println("Invalid direction");
-        }
-    }
 }

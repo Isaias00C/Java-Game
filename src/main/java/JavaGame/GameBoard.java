@@ -79,6 +79,18 @@ public class GameBoard {
         int x = character.getXCoordinate();
         int y = character.getYCoordinate();
 
+        System.out.print("Enter the direction: ");
+        Scanner scanner = ScannerSingleton.getInstance();
+        String direction = scanner.nextLine().toLowerCase();
+        switch(direction){
+            case "right" -> grid[x + 1][y].setCharacter(character);
+            case "left" -> grid[x - 1][y].setCharacter(character);
+            case "down" -> grid[x][y + 1].setCharacter(character);
+            case "up" -> grid[x][y - 1].setCharacter(character);
+            default -> System.out.println("Invalid direction");
+        }
+
+        grid[x][y].setNullCell();
 
     }
 }

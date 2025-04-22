@@ -29,6 +29,7 @@ public abstract class Mob implements Character{
         return "->LifePoints: " + this.lifePoints + "\n->Damage: " + this.damage;
     }
 
+    @Override
     public String toString() {
         return " [ Mob ] ";
     }
@@ -49,15 +50,5 @@ public abstract class Mob implements Character{
         return this.yCoordinate;
     }
 
-    @Override
-    public void moveCharacter(String direction) {
-        switch (direction) {
-            case "left" -> this.xCoordinate -= 1;
-            case "right" -> this.xCoordinate += 1;
-            case "up" -> this.yCoordinate -= 1;
-            case "down" -> this.yCoordinate += 1;
-            default -> System.out.println("Invalid direction");
-        }
-    }
 
 }
