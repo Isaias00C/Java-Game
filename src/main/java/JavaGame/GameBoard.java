@@ -82,12 +82,21 @@ public class GameBoard {
         System.out.print("Enter the direction: ");
         Scanner scanner = ScannerSingleton.getInstance();
         String direction = scanner.nextLine().toLowerCase();
-        switch(direction){
-            case "right" -> grid[x + 1][y].setCharacter(character);
-            case "left" -> grid[x - 1][y].setCharacter(character);
-            case "down" -> grid[x][y + 1].setCharacter(character);
-            case "up" -> grid[x][y - 1].setCharacter(character);
-            default -> System.out.println("Invalid direction");
+
+        if(direction.equals("up")){
+            grid[x-1][y].setCharacter(character);
+            grid[x-1][y].getCharacter().setCoordinates(x-1, y);
+        }else if(direction.equals("down")){
+            grid[x+1][y].setCharacter(character);
+            grid[x+1][y].getCharacter().setCoordinates(x+1, y);
+        }else if (direction.equals("left")) {
+            grid[x][y-1].setCharacter(character);
+            grid[x][y-1].getCharacter().setCoordinates(x, y-1);
+        }else if (direction.equals("right")) {
+            grid[x][y+1].setCharacter(character);
+            grid[x][y+1].getCharacter().setCoordinates(x, y+1);
+        }else {
+            System.out.println("Invalid direction");
         }
 
         grid[x][y].setNullCell();

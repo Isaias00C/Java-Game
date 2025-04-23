@@ -16,9 +16,9 @@ public class Main {
         System.out.println(player.getStatus());
 
         //begin the game
-            player.moveCharacter(move);
+        while(true){
+            gameBoard.moveCharacter(player);
             gameBoard.printGameBoard();
-
-
+        }
     }
 }
