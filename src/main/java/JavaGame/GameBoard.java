@@ -83,16 +83,16 @@ public class GameBoard {
         Scanner scanner = ScannerSingleton.getInstance();
         String direction = scanner.nextLine().toLowerCase();
 
-        if(direction.equals("up")){
+        if(direction.equals("up") && x > 0){
             grid[x-1][y].setCharacter(character);
             grid[x-1][y].getCharacter().setCoordinates(x-1, y);
-        }else if(direction.equals("down")){
+        }else if(direction.equals("down") && x < grid.length-1){
             grid[x+1][y].setCharacter(character);
             grid[x+1][y].getCharacter().setCoordinates(x+1, y);
-        }else if (direction.equals("left")) {
+        }else if (direction.equals("left") && y > 0) {
             grid[x][y-1].setCharacter(character);
             grid[x][y-1].getCharacter().setCoordinates(x, y-1);
-        }else if (direction.equals("right")) {
+        }else if (direction.equals("right") && y < grid.length-1) {
             grid[x][y+1].setCharacter(character);
             grid[x][y+1].getCharacter().setCoordinates(x, y+1);
         }else {
