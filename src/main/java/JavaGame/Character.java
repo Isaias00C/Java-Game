@@ -6,5 +6,5 @@ public interface Character {
     void setCoordinates(int XCoordinate, int YCoordinate);
     int getXCoordinate();
     int getYCoordinate();
-    void yourTurn(GameBoard gameBoard);
+    void yourTurn(AttackSystem attackSystem, GameBoard gameBoard);
 }

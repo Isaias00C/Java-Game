@@ -6,6 +6,7 @@ public class Main {
         //init Game Board
 
         GameBoard gameBoard = new GameBoard("Easy");
+        AttackSystem attackSystem = new AttackSystem();
 
         gameBoard.setGameBoard();
         gameBoard.printGameBoard();
@@ -17,7 +18,7 @@ public class Main {
 
         //begin the game
         while(true){
-            gameBoard.turn(player);
+            gameBoard.turn(attackSystem, player);
             gameBoard.printGameBoard();
         }
     }

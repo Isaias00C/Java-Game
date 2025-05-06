@@ -103,8 +103,8 @@ public class GameBoard {
 
     }
 
-    public void turn(Character character){
-        character.yourTurn(this);
+    public void turn(AttackSystem attackSystem, Character character){
+        character.yourTurn(attackSystem, this);
     }
 
     public int getLength(){

@@ -5,8 +5,9 @@ public class Orc extends Mob{
         super();
     }
 
+
     @Override
-    public void yourTurn(GameBoard gameBoard) {
+    public void yourTurn(AttackSystem attackSystem, GameBoard gameBoard) {
 
     }
 }
