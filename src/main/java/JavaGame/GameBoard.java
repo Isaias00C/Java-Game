@@ -102,4 +102,12 @@ public class GameBoard {
         grid[x][y].setNullCell();
 
     }
+
+    public void turn(Character character){
+        character.yourTurn(this);
+    }
+
+    public int getLength(){
+        return grid[0].length;
+    }
 }

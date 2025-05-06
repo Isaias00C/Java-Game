@@ -17,7 +17,7 @@ public class Main {
 
         //begin the game
         while(true){
-            gameBoard.moveCharacter(player);
+            gameBoard.turn(player);
             gameBoard.printGameBoard();
         }
     }
